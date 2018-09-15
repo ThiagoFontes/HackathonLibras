@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
-	$("#pesquisa").keyup(function() {
-		/* Act on the event */
+	/*$("#pesquisa").keyup(function() {
+		
 		var valor = $(this).val();
 
 		$.ajax({
@@ -31,5 +31,30 @@ jQuery(document).ready(function($) {
 		
 
 	});
-	
+	*/
+	function pegarSinais(){
+		$.ajax({
+			beforeSend: function(){
+				
+			},
+			method: "POST",
+			
+			url:"php/listarSinais.php",
+			 // Não faz cache
+			cache: false,
+
+			dataType: "json",
+			 // Se enviado com sucesso
+			success: function( dados ) {
+				alert(dados);
+			},
+
+			error: function(){
+				alert("Erro ao listar os sinais");
+			}
+		
+
+	});
+	}
+	pegarSinais();
 });
