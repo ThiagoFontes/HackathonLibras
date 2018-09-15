@@ -1,0 +1,23 @@
+.head-content h2 {
+    font-family: 'Montserrat', sans-serif, Arial;
+    font-weight: 700;
+    color: #c0d3d3;
+    font-size: 36px;
+    padding-left: 8%;
+    font-weight: normal;
+}
+
+.load-more-holder span{
+    border-radius: 20px;
+    background: #47afbf;
+    display: inline-block;
+    padding: 0 10px 0 10px;
+    cursor: pointer;
+    color: #FFF;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+.load-more-holder span a {
+    color: #FFF !important;
+}
+
