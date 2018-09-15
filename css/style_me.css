@@ -41,7 +41,13 @@
 }
 .image-slider-wrapper {
     padding-left: 10%;
+
 }
 .image-slider-wrapper video {
     width: 80%;
+}
+.area_login {
+    width: 300px !important;
+    height: 400px !important;
+    background-color: #CCC !important ;
 }
