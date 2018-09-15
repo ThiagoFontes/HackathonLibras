@@ -159,13 +159,11 @@ class DB extends SQLite3 {
     public function listUsers() {
         $sql = 'SELECT * FROM user';
         $statement = $this->prepare($sql);
-        //$statement->bindValue(':username', $username);
-
         $result = $statement->execute();
-        //$row = $result->fetchArray();
-        //echo '<pre>'; print_r($row); echo '</pre>';
-
-        return $result;
+        while($r = $result->fetchArray()) {
+          $rows['listUsers'][] = $r;
+        }
+        print json_encode($rows);
     }
 
     /**
@@ -179,5 +177,40 @@ class DB extends SQLite3 {
          $rows['sinais'][] = $r;
       }
       print json_encode($rows);
+    }
+
+    /**
+    * Get User
+    */
+    public function getUser($username) {
+      $sql = 'SELECT * FROM user WHERE  username = :username';
+      $statement = $this->prepare($sql);
+      $statement->bindValue(':username', $username);
+      $result = $statement->execute();
+      $row = $result->fetchArray();
+      print json_encode($row);
+    }
+
+    /**
+    * Get Sinal
+    */
+    public function getSinal($pt_title ) {
+      $sql = 'SELECT * FROM sinais WHERE  pt_title = :pt_title';
+      $statement = $this->prepare($sql);
+      $statement->bindValue(':pt_title', $pt_title);
+      $result = $statement->execute();
+      $row = $result->fetchArray();
+      print json_encode($row);
+    }
+
+    /**
+    * Rename signal
+    */
+    public function rename($oldname, $newname) {
+      $sql = 'UPDATE sinais SET pt_title=:newname WHERE  pt_title = :oldname';
+      $statement = $this->prepare($sql);
+      $statement->bindValue(':newname', $newname);
+      $statement->bindValue(':oldname', $oldname);
+      $statement->execute();
     }
 }
