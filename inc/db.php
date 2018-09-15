@@ -22,8 +22,20 @@ class DB extends SQLite3 {
      */
     protected function initialize() {
         $sql = 'CREATE TABLE IF NOT EXISTS user (
-                    username STRING UNIQUE NOT NULL,
-                    password STRING NOT NULL
+                  username STRING UNIQUE NOT NULL,
+                  password STRING NOT NULL,
+                  email VARCHAR(255) NULL,
+                  create_time TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+                  max_scores INT NULL
+                )';
+
+        $this->exec($sql);
+
+        $sql = 'CREATE TABLE IF NOT EXISTS sinais (
+                  pt_title VARCHAR(45) NOT NULL,
+                  gif_url VARCHAR(45) NOT NULL,
+                  description LONGTEXT NULL,
+                  PRIMARY KEY (pt_title)
                 )';
 
         $this->exec($sql);
@@ -109,7 +121,7 @@ class DB extends SQLite3 {
      */
     public function createUser($username, $password) {
         $sql = 'INSERT INTO user
-                VALUES (:username, :password)';
+                VALUES (:username, :password, :email, :create_time, :max_scores)';
 
         $options = array('cost' => self::BCRYPT_COST);
         $derivedPassword = password_hash($password, PASSWORD_BCRYPT, $options);
@@ -121,5 +133,51 @@ class DB extends SQLite3 {
         $statement->execute();
 
         $statement->close();
+    }
+
+    /**
+    * Create sinal
+    */
+     public function createSinal($pt_title, $gif_url) {
+        $sql = 'INSERT INTO sinais
+                VALUES (:pt_title, :gif_url, :description)';
+
+
+        $statement = $this->prepare($sql);
+        $statement->bindValue(':pt_title', $pt_title);
+        $statement->bindValue(':gif_url', $gif_url);
+
+        $statement->execute();
+
+        $statement->close();
+    }
+
+    /**
+    * List users
+    *
+    */
+    public function listUsers() {
+        $sql = 'SELECT * FROM user';
+        $statement = $this->prepare($sql);
+        //$statement->bindValue(':username', $username);
+
+        $result = $statement->execute();
+        //$row = $result->fetchArray();
+        //echo '<pre>'; print_r($row); echo '</pre>';
+
+        return $result;
+    }
+
+    /**
+    *List Sinais
+    */
+    public function listSinais() {
+      $sql = 'SELECT * FROM sinais';
+      $statement = $this->prepare($sql);
+      $result = $statement->execute();
+      while($r = $result->fetchArray()) {
+         $rows['sinais'][] = $r;
+      }
+      print json_encode($rows);
     }
 }
