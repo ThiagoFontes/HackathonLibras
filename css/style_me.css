@@ -46,8 +46,21 @@
 .image-slider-wrapper video {
     width: 80%;
 }
+
+.featured-post-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .area_login {
+    opacity: 0.8;
+    align-items: flex-start;
     width: 300px !important;
-    height: 400px !important;
-    background-color: #CCC !important ;
+    height: 250px !important;
+    background-color: #FFF !important ;
+}
+
+.input-field.col.s12 {
+    margin: 8px 0;
 }
