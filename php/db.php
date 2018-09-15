@@ -213,4 +213,15 @@ class DB extends SQLite3 {
       $statement->bindValue(':oldname', $oldname);
       $statement->execute();
     }
+
+    public function searchSinais($search) {
+      $sql = 'SELECT * FROM sinais WHERE pt_title LIKE :search';
+      $statement = $this->prepare($sql);
+      $statement->bindValue(':search', '%'.$search.'%');
+      $result = $statement->execute();
+      while($r = $result->fetchArray()) {
+         $rows['sinais'][] = $r;
+      }
+      print json_encode($rows);
+    }
 }
