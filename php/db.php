@@ -5,7 +5,7 @@
  */
 class DB extends SQLite3 {
 
-    const DATABASE_NAME = 'users.db';
+    const DATABASE_NAME = 'banco.db';
     const BCRYPT_COST = 14;
 
     /**
@@ -34,6 +34,7 @@ class DB extends SQLite3 {
         $sql = 'CREATE TABLE IF NOT EXISTS sinais (
                   pt_title VARCHAR(45) NOT NULL,
                   gif_url VARCHAR(45) NOT NULL,
+                  category VARCHAR(45) NOT NULL,
                   description LONGTEXT NULL,
                   PRIMARY KEY (pt_title)
                 )';
@@ -138,14 +139,15 @@ class DB extends SQLite3 {
     /**
     * Create sinal
     */
-     public function createSinal($pt_title, $gif_url) {
+     public function createSinal($pt_title, $gif_url, $category) {
         $sql = 'INSERT INTO sinais
-                VALUES (:pt_title, :gif_url, :description)';
+                VALUES (:pt_title, :gif_url, :category, :description)';
 
 
         $statement = $this->prepare($sql);
         $statement->bindValue(':pt_title', $pt_title);
         $statement->bindValue(':gif_url', $gif_url);
+        $statement->bindValue(':category', $category);
 
         $statement->execute();
 

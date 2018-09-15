@@ -1,5 +1,6 @@
 <?php
 //http://localhost:8000/inc/cria_sinais.php?pt_title=sinal&gif_url=img/nova
+header("Content-type: text/plain; charset=utf-8");
 require_once('db.php');
 
 function checkGETParametersOrDie($parameters) {
@@ -8,13 +9,14 @@ function checkGETParametersOrDie($parameters) {
     }
 }
 
-checkGETParametersOrDie(['pt_title', 'gif_url']);
+checkGETParametersOrDie(['pt_title', 'gif_url', 'category']);
 
 $pt_title = $_GET['pt_title'];
 $gif_url = $_GET['gif_url'];
+$category = $_GET['category'];
 
 $db = new DB();
-$db->createSinal($pt_title, $gif_url);
+$db->createSinal($pt_title, $gif_url, $category);
 
 echo "Inserido '$pt_title'.";
 
