@@ -217,7 +217,7 @@ class DB extends SQLite3 {
     }
 
     public function searchSinais($search) {
-      $sql = 'SELECT * FROM sinais WHERE pt_title LIKE :search';
+      $sql = 'SELECT * FROM sinais WHERE pt_title LIKE :search OR category LIKE :search';
       $statement = $this->prepare($sql);
       $statement->bindValue(':search', '%'.$search.'%');
       $result = $statement->execute();
