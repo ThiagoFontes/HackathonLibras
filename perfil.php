@@ -96,7 +96,7 @@
         <div id="content" class="site-content">
 
             <div class="page-header-image relative">
-                <img src="demo-images/01.jpg" alt="About">
+                <img src="demo-images/01.jpg" alt="About" style="max-height: 400px;">
             </div>
 
 

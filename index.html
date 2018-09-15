@@ -11,6 +11,9 @@
         <link rel="shortcut icon" href="images/favicon.png" />
         <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7CLibre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/materialize.min.css">
 
         <link rel="stylesheet" type="text/css"  href='css/clear.css' />
         <link rel="stylesheet" type="text/css"  href='css/common.css' />
@@ -20,15 +23,18 @@
         <link rel="stylesheet" type="text/css"  href='style.css' />
         <link rel="stylesheet" type="text/css" href="css/style_me.css">
        
-
+        
         <!--[if lt IE 9]>
                 <script src="js/html5.js"></script>
         <![endif]-->
+
+        
 
     </head>
 
 
     <body class="home blog">
+
 
         <!-- Preloader Gif -->
         <table class="doc-loader">
@@ -78,12 +84,9 @@
                 <div class="social-holder">
                     <div class="social-list">
                         <a href="#"><i class="fa fa-list-ol"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-youtube-play"></i></a>
                         <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-vimeo"></i></a>
-                        <a href="#"><i class="fa fa-behance"></i></a>
-                        <a href="#"><i class="fa fa-rss"></i></a>
+                        
                     </div>
                 </div>
                 <div class="fixed scroll-top"><i class="fa fa-caret-square-o-up" aria-hidden="true"></i></div>
@@ -102,7 +105,7 @@
                 </div>
                 
                 <div class="head-content"><h2>Por onde começar?</h2></div>
-                <div class="blog-holder center-relative">
+                <div class="blog-holder center-relative" id="content_lista_pesquisa">
                     <article id="post-2" class="blog-item-holder">
                         <div class="entry-content relative">
                             <div class="content-1170 center-relative">
@@ -209,23 +212,9 @@
                 <div class="clear"></div>
                 <div class="block load-more-holder">
                     <h2>Mais frequentes</h2>
-                    <span><a href="visualizar.php?p=dor_cabeca" class="link_pesquisa">label teste</a></span>
-                    <span>label teste 2</span>
-                    <span>labelnnnnn</span>
-                    <span>labelnnn</span>
-                    <span>labelnn</span>
-                    <span>labeln</span>
-                    <span>labelnnnn</span>
-                    <span>labeln</span>
-                    <span>labelnnn</span>
-                    <span>labeln</span>
-                    <span>labelnn</span>
-                    <span>labeln</span>
-                    <span>labeln</span>
-                    <span>labeln</span>
-                    <span>labeln</span>
-                    <span>labeln</span>
-                    <span>labeln</span>
+                    <div class="content_labels">
+                        <!-- Conteúdo via Json -->
+                    </div>
 
                 </div>
                 
@@ -242,6 +231,8 @@
 
         <!--Load JavaScript-->
         <script type="text/javascript" src="js/jquery.js"></script>
+        <script src="js/materialize.min.js"></script>
+
 
         <script type='text/javascript' src='js/imagesloaded.pkgd.js'></script>
         <script type='text/javascript' src='js/jquery.nicescroll.min.js'></script>
@@ -253,6 +244,7 @@
         <script type='text/javascript' src='js/main.js'></script>
 
         <!-- meus scripts -->
+        
         <script type='text/javascript' src='js/funcoes_interacao.js'></script>
         <script type='text/javascript' src='js/funcoes_dados.js'></script>
     </body>

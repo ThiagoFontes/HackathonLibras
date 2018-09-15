@@ -12,6 +12,7 @@
     background: #47afbf;
     display: inline-block;
     padding: 0 10px 0 10px;
+    margin-right: 3px;
     cursor: pointer;
     color: #FFF;
     font-weight: normal;
@@ -20,4 +21,27 @@
 .load-more-holder span a {
     color: #FFF !important;
 }
-
+.load-more-holder span a:hover {
+    color: #FFF ;
+}
+#header-main-menu ul li {
+    float: none;
+}
+#header-main-menu{
+    margin-bottom: 50px;
+}
+#header-main-menu ul li a:hover {
+    background-color: transparent;
+}
+.rounded {
+    font-family: 'Roboto', sans-serif;
+    opacity: 0.8 !important;
+    font-size: 16px;
+    background-color: #FF0020 !important;
+}
+.image-slider-wrapper {
+    padding-left: 10%;
+}
+.image-slider-wrapper video {
+    width: 80%;
+}

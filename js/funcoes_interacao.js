@@ -6,4 +6,9 @@ jQuery(document).ready(function($) {
 		
 		location.href=link;
 	});
+
+	//menu inferior
+	
+	
+	
 });
