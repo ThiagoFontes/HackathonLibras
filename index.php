@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
     <head>
@@ -224,6 +225,8 @@
             </div>
 
             <div class="featured-image-holder">
+                
+                <input type="hidden" id="hidden_login" value="<?php if(isset($_SESSION["login"])){echo $_SESSION["login"];}else{echo "erro";} ?>" placeholder="">
                 <div class="featured-post-image" style="background-image: url(demo-images/doctor.jpg)">
                     
                     <!-- ÁREA PARA LOGIN (username,password,php/login.php)-->

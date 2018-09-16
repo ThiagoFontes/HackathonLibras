@@ -54,13 +54,68 @@
 }
 
 .area_login {
+    font-family: 'Montserrat', sans-serif, Arial;
+    display: none;
     opacity: 0.8;
     align-items: flex-start;
-    width: 300px !important;
-    height: 250px !important;
+    width: 350px !important;
+    
+    padding:35px 25px 35px 25px ;
     background-color: #FFF !important ;
+    border-radius: 3px;
+    border:solid 3px #007bff;
 }
 
-.input-field.col.s12 {
-    margin: 8px 0;
+
+.search-holder label {
+    width: 100% !important;
+}
+
+#content_lista_pesquisa a{
+    text-decoration: none;
+}
+
+#pesquisa.error {
+       border-bottom:solid 1px #D8588C !important;
+}
+#error_p {
+    font-family: 'Montserrat', sans-serif, Arial;
+    font-size: 14px;
+    opacity: 0;
+    display: block;
+    background-color:#D8588C ;
+    padding: 3px;
+    color: #FFF;
+    padding-left: 5%;
+    
+
+}
+.nav-justified {
+    margin-left: 8%;
+    font-family: 'Montserrat', sans-serif, Arial;
+
+}
+.nav-justified h4 {
+    padding-top: 0px;
+}
+
+.jogo_video {
+    margin-top: 20px;
+}
+.area_video a{
+    text-decoration: none;
+}
+a.active {
+    background-color: #0CE889 !important;
+    border:none;
+}
+.content_labels a{
+    text-decoration: none;
+}
+
+.op_errado {
+    color: #FFF;
+    background-color: #D8588C !important;
+    -webkit-transition: linear 0.3s;
+    transition: linear 0.1s;
 }

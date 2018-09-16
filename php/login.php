@@ -26,9 +26,13 @@ $db = new DB();
 $authenticated = $db->authenticateUser($username, $password);
 
 if ($authenticated) {
-    $response = "Hello $username, you have been successfully authenticated.";
+	session_start();
+	$_SESSION["login"] = $username;
+	$_SESSION["senha"] = $password;
+	
+    $response = "ok";
 } else {
-    $response = 'Incorrect credentials or user does not exist.';
+    $response = 'erro';
 }
 
 echo $response;

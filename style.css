@@ -673,8 +673,7 @@ body.open .site-content
 {
     padding: 0;
     width: 100%;
-    max-width: 100%;
-    opacity: 0;  
+    max-width: 100%; 
     -webkit-transition: opacity 0.3s ease;
     -moz-transition: opacity 0.3s ease;
     -ms-transition: opacity 0.3s ease;
@@ -711,7 +710,7 @@ body.open .site-content
 
 .full-screen-scroll h2.entry-title 
 {
-    margin-top: 160px;
+    margin-top: 30px;
 }
 
 

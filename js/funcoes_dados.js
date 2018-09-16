@@ -58,6 +58,9 @@ jQuery(document).ready(function($) {
 				dataType: "json",
 				 // Se enviado com sucesso
 				success: function( dados ) {
+					$("#pesquisa").removeClass('error');
+					$("#error_p").css({"opacity":"0"});
+
 					$("#content_lista_pesquisa").html("");
 					var cont = 5;
 					for(var i = 0; i<dados.sinais.length; i++ ){
@@ -72,8 +75,9 @@ jQuery(document).ready(function($) {
 				},
 
 				error: function(){
-					
-					 M.toast({html: 'Pesquisa não encontrada!', classes: 'rounded'});
+					$("#pesquisa").addClass('error');
+					$("#error_p").css({"opacity":"1"});
+					 
 				}
 		
 
