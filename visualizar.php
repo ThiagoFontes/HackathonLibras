@@ -117,8 +117,8 @@
                             </div>
                             <div class="clear"></div>
                         <div class="content-wrap content-660 center-relative">
-                            <p>Now when I had mastered the language of this water and had come to know every trifling feature that bordered the great river as familiarly as I knew the letters of the alphabet, I had made a valuable acquisition.</p>
-                            <br>
+                           <!--  <p>Now when I had mastered the language of this water and had come to know every trifling feature that bordered the great river as familiarly as I knew the letters of the alphabet, I had made a valuable acquisition.</p>
+                            <br> -->
                             <div class="clear"></div>
                         </div>
                         
