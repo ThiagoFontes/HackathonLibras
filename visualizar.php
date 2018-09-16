@@ -78,7 +78,7 @@
                 </div>
                 <div class="social-holder">
                      <div class="social-list">
-                        <a href="#"><i class="fa fa-list-ol"></i></a>
+                        <a href="#"><i class="fa fa-gamepad"></i></a>
                         <a href="#"><i class="fa fa-youtube-play"></i></a>
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         
