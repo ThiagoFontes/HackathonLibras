@@ -1,0 +1,13 @@
+{
+    "name": "tfontes/hackathon-libras",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Thiago dos Santos Fontes",
+            "email": "thiago93br@gmail.com"
+        }
+    ],
+    "require": {
+	    "ext-pdo_sqlite": "*"
+	}
+}
