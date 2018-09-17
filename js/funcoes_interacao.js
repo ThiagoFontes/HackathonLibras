@@ -96,6 +96,9 @@ jQuery(document).ready(function($) {
 				$("#desafios_n").html("Desafio 2");
 				$("#score_area").html("Score: "+dados.score);
 				$(".jogo_video").html("<video controls><source src='"+dados.videos[dados.n_desafio]+"' type='video/mp4'></video>");
+				$('.respostas_lista').hide();
+				$('.respostas_lista').slideDown('slow');
+
 			}
 			else{
 				$('.respostas_lista a').removeClass('active');

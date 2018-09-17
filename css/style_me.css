@@ -116,6 +116,19 @@ a.active {
 .op_errado {
     color: #FFF;
     background-color: #D8588C !important;
+    animation-name: 'opcao_errada';
     -webkit-transition: linear 0.3s;
     transition: linear 0.1s;
+
+}
+@keyframes opcao_errada {
+    0%{
+        background-color: #0CE889 !important;
+    }
+    50%{
+        background-color: #D8588C !important;
+    }
+    100%{
+        background-color: #FFF !important;
+    }
 }
