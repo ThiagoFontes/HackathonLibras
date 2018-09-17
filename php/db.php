@@ -5,7 +5,7 @@
  */
 class DB extends SQLite3 {
 
-    const DATABASE_NAME = 'banco.db';
+    const DATABASE_NAME = '../database/database.sqlite';
     const BCRYPT_COST = 14;
 
     /**
